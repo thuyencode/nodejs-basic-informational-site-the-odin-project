@@ -3,6 +3,7 @@
 [More detail information here](https://www.theodinproject.com/lessons/nodejs-basic-informational-site).
 
 ![thuyencode github io 2024-07-29 18 25 56 ](https://github.com/user-attachments/assets/633e743e-fb12-4d8f-b18c-64afb834341b)
+![localhost 2024-07-29 19 19 10 ](https://github.com/user-attachments/assets/fe3770cd-eb20-4270-a62b-c25e38ae8d30)
 
 ## What makes this project standout from the other community submissions?
 
