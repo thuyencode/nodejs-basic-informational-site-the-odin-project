@@ -1,7 +1,7 @@
 import { existsSync } from 'fs'
 import fs from 'fs/promises'
 import http, { IncomingMessage, ServerResponse } from 'http'
-import { HttpMethod } from 'http-status-ts'
+import { HttpMethod, HttpStatus } from 'http-status-ts'
 import {
   HttpError,
   InternalServerError,
@@ -49,11 +49,18 @@ const server = http.createServer((req, res) => {
       res.write(data)
       res.end()
     } catch (error) {
-      if (error instanceof HttpError) {
-        if (error instanceof InternalServerError) {
-          console.error(error)
-        }
+      if (error instanceof NotFound) {
+        res.writeHead(HttpStatus.FOUND, { location: '/404' })
+        res.end()
 
+        return
+      }
+
+      if (error instanceof InternalServerError) {
+        console.error(error)
+      }
+
+      if (error instanceof HttpError) {
         res.writeHead(error.statusCode, { 'Content-Type': 'application/json' })
         res.end(
           JSON.stringify({
