@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <style>
+      body {
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      main {
+        height: 100%;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+      }
+      iconify-icon {
+        font-size: 1.5rem;
+        vertical-align: middle;
+      }
+      fieldset.grid > label {
+        margin: 0;
+      }
+    </style>
+    <title>Homepage | Node.js Crash Course | Thuyen Code</title>
+  </head>
+
+  <body class="container">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/" aria-current="page">Home</a></li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <hgroup>
+        <h1>This is the Homepage</h1>
+        <p>
+          of a super duper simple
+          <span style="display: inline-block">
+            Node.js
+            <iconify-icon icon="vscode-icons:file-type-node"></iconify-icon>
+            server
+          </span>
+        </p>
+      </hgroup>
+    </main>
+
+    <footer>
+      <nav>
+        <ul>
+          <li>
+            <small>
+              <a
+                href="https://github.com/thuyencode/nodejs-crash-course"
+                class="secondary"
+              >
+                Thuyen Code
+              </a>
+            </small>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
