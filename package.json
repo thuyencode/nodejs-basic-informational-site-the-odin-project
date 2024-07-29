@@ -8,6 +8,7 @@
     "build": "esbuild src/index.ts --bundle --minify --platform=node --outfile=dist/index.js --format=esm",
     "dev": "tsx watch --env-file=.env.development.local src/index.ts",
     "start": "node --env-file=.env.production dist/index.js",
+    "gh-pages": "gh-pages --dist 'public' --branch 'gh-pages'",
     "lint": "tsc ; eslint ./src"
   },
   "repository": {
@@ -30,6 +31,7 @@
     "@types/node": "^22.0.0",
     "esbuild": "^0.23.0",
     "eslint": "^8.57.0",
+    "gh-pages": "^6.1.1",
     "http-status-ts": "^2.0.1",
     "tsx": "^4.16.2",
     "typescript": "^5.5.4",
