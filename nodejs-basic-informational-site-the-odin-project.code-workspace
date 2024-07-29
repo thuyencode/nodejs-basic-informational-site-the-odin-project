@@ -19,7 +19,8 @@
     "recommendations": [
       "dbaeumer.vscode-eslint",
       "esbenp.prettier-vscode",
-      "yoavbls.pretty-ts-errors"
+      "yoavbls.pretty-ts-errors",
+      "christian-kohler.npm-intellisense"
     ]
   }
 }
