@@ -46,6 +46,8 @@ const server = http.createServer((req, res) => {
             error: { statusCode: error.statusCode, message: error.message }
           })
         )
+      } else {
+        console.error(error)
       }
     }
   })

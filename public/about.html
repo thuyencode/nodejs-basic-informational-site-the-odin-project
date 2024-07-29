@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>About page | Project: Basic Informational Site | Thuyen Code</title>
+  </head>
+
+  <body class="container">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about" aria-current="page">About</a></li>
+          <li><a href="/contact-me">Contact me</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <hgroup>
+        <h1>This is the About page</h1>
+        <p>
+          of a super duper simple
+          <span style="display: inline-block">
+            Node.js
+            <iconify-icon icon="vscode-icons:file-type-node"></iconify-icon>
+            server
+          </span>
+        </p>
+      </hgroup>
+
+      <hgroup>
+        <h3>There's nothing more to say, seriously!</h3>
+        <p>
+          So I just put a random quote down here to fill up the page. Check the
+          <a href="/">home</a> page for more info.
+        </p>
+      </hgroup>
+
+      <div>
+        <blockquote>
+          "<span id="quote-content"
+            >Be patience, the quote is being fetched right now for real. Or else
+            something went wrong, i guess.</span
+          >"
+          <footer>
+            <cite>— <span id="quote-author">Thuyen Code</span></cite>
+          </footer>
+        </blockquote>
+        <p>
+          <a href="https://github.com/lukePeavey/quotable">Check the API</a>.
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <nav>
+        <ul>
+          <li class="iconify-wrapper">
+            <iconify-icon icon="mdi:github"></iconify-icon>
+            <a
+              href="https://github.com/thuyencode/nodejs-basic-informational-site-the-odin-project"
+              class="secondary"
+            >
+              Thuyen Code
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+
+    <script>
+      const QUOTE_CONTENT_ELE = document.getElementById('quote-content')
+      const QUOTE_AUTHOR_ELE = document.getElementById('quote-author')
+
+      fetch('https://api.quotable.io/quotes/random')
+        .then((res) => {
+          if (res.ok) {
+            return res.json()
+          }
+        })
+        .then((data) => {
+          if (data !== undefined) {
+            QUOTE_CONTENT_ELE.textContent = data[0].content
+            QUOTE_AUTHOR_ELE.textContent = data[0].author
+          }
+        })
+    </script>
+  </body>
+</html>

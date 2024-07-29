@@ -10,7 +10,7 @@
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>Homepage | Node.js Crash Course | Thuyen Code</title>
+    <title>Home | Project: Basic Informational Site | Thuyen Code</title>
   </head>
 
   <body class="container">
@@ -18,39 +18,102 @@
       <nav>
         <ul>
           <li><a href="/" aria-current="page">Home</a></li>
-          <li>
-            <a href="/about">About</a>
-          </li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact-me">Contact me</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
       <hgroup>
-        <h1>This is the Homepage</h1>
+        <h1>This is the Home page</h1>
         <p>
           of a super duper simple
-          <span style="display: inline-block">
+          <span class="iconify-wrapper">
             Node.js
             <iconify-icon icon="vscode-icons:file-type-node"></iconify-icon>
             server
           </span>
         </p>
       </hgroup>
+
+      <div>
+        <details>
+          <summary>Why did I make this?</summary>
+          <p class="iconify-wrapper">
+            This is a project in the
+            <a
+              href="https://www.theodinproject.com/paths/full-stack-javascript/courses/nodejs"
+            >
+              NodeJS Course
+            </a>
+            that I took on
+            <iconify-icon icon="simple-icons:theodinproject"></iconify-icon>
+            <b>The Odin Project</b>.
+            <a
+              href="https://www.theodinproject.com/lessons/nodejs-basic-informational-site"
+            >
+              More details info here</a
+            >.
+          </p>
+        </details>
+
+        <hr />
+
+        <details>
+          <summary>Hmm, tech stack?</summary>
+
+          <p>Oh right, hold my garbage collector.</p>
+          <ul>
+            <li>
+              <iconify-icon
+                style="font-size: 1.25rem"
+                icon="vscode-icons:file-type-node"
+              ></iconify-icon>
+              Node.js
+            </li>
+            <li>
+              <iconify-icon
+                style="font-size: 1.25rem"
+                icon="skill-icons:typescript"
+              ></iconify-icon>
+              TypeScript <i>(Surprise!)</i>
+            </li>
+            <li>
+              <iconify-icon
+                style="font-size: 1.25rem"
+                icon="skill-icons:html"
+              ></iconify-icon>
+              HTML
+            </li>
+            <li>
+              <iconify-icon
+                style="font-size: 1.25rem"
+                icon="skill-icons:css"
+              ></iconify-icon>
+              CSS
+            </li>
+            <li>
+              And thanks to <a href="https://picocss.com">Pico CSS</a> ✨ to I
+              don't need to use my brain to design the UI of this project
+              myself.
+            </li>
+          </ul>
+        </details>
+      </div>
     </main>
 
     <footer>
       <nav>
         <ul>
-          <li>
-            <small>
-              <a
-                href="https://github.com/thuyencode/nodejs-crash-course"
-                class="secondary"
-              >
-                Thuyen Code
-              </a>
-            </small>
+          <li class="iconify-wrapper">
+            <iconify-icon icon="mdi:github"></iconify-icon>
+            <a
+              href="https://github.com/thuyencode/nodejs-basic-informational-site-the-odin-project"
+              class="secondary"
+            >
+              Thuyen Code
+            </a>
           </li>
         </ul>
       </nav>

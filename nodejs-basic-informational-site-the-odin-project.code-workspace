@@ -20,7 +20,9 @@
       "dbaeumer.vscode-eslint",
       "esbenp.prettier-vscode",
       "yoavbls.pretty-ts-errors",
-      "christian-kohler.npm-intellisense"
+      "christian-kohler.npm-intellisense",
+      "antfu.iconify",
+      "formulahendry.auto-complete-tag"
     ]
   }
 }
