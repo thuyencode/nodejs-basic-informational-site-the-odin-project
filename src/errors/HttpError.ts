@@ -9,6 +9,7 @@ import { HttpStatus } from 'http-status-ts'
  */
 class HttpError extends Error {
   statusCode: HttpStatus
+
   /**
    * Creates an instance of HttpError.
    *

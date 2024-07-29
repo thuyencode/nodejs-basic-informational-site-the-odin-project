@@ -40,7 +40,7 @@ const server = http.createServer((req, res) => {
       }
 
       if (!existsSync(route.filePath)) {
-        throw new InternalServerError()
+        throw new InternalServerError(`File ${route.filePath} doesn't exist`)
       }
 
       const data = await fs.readFile(route.filePath)
@@ -50,6 +50,10 @@ const server = http.createServer((req, res) => {
       res.end()
     } catch (error) {
       if (error instanceof HttpError) {
+        if (error instanceof InternalServerError) {
+          console.error(error)
+        }
+
         res.writeHead(error.statusCode, { 'Content-Type': 'application/json' })
         res.end(
           JSON.stringify({
