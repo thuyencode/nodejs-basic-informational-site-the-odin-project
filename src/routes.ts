@@ -1,28 +1,28 @@
 import { HTTPMethod } from 'http-method-enum'
 import HTTP_STATUS_CODES from 'http-status-enum'
 import path from 'path'
-import { DIR_NAME } from './constants.js'
+import { CURRENT_DIR } from './constants.js'
 
 const defaultConfig = {
   method: HTTPMethod.GET,
   statusCode: HTTP_STATUS_CODES.default.OK,
   contentType: { 'Content-Type': 'text/html; charset=utf-8' },
-  filePath: path.join(path.dirname(DIR_NAME), 'public', 'index.html')
+  filePath: path.join(path.dirname(CURRENT_DIR), 'public', 'index.html')
 }
 
 export const routes = {
   '/': defaultConfig,
   '/about': {
     ...defaultConfig,
-    filePath: path.join(DIR_NAME, 'public', 'about.html')
+    filePath: path.join(CURRENT_DIR, 'public', 'about.html')
   },
   '/contact-me': {
     ...defaultConfig,
-    filePath: path.join(DIR_NAME, 'public', 'contact-me.html')
+    filePath: path.join(CURRENT_DIR, 'public', 'contact-me.html')
   },
   '/404': {
     ...defaultConfig,
-    filePath: path.join(DIR_NAME, 'public', '404.html')
+    filePath: path.join(CURRENT_DIR, 'public', '404.html')
   }
 } as const
 
