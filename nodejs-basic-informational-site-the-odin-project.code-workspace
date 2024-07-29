@@ -1,0 +1,25 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "prettier.semi": false,
+    "prettier.singleQuote": true,
+    "prettier.jsxSingleQuote": true,
+    "prettier.trailingComma": "none",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "always",
+      "source.organizeImports": "always"
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "yoavbls.pretty-ts-errors"
+    ]
+  }
+}

@@ -2,9 +2,13 @@
   "name": "nodejs-basic-informational-site-the-odin-project",
   "version": "1.0.0",
   "description": "Project: Basic Informational Site - The Odin Project",
-  "main": "index.js",
+  "main": "src/index.ts",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "dev": "tsx watch --env-file=.env.development.local src/index.ts",
+    "start": "node --env-file=.env.production dist/index.js",
+    "lint": "eslint ./src"
   },
   "repository": {
     "type": "git",
@@ -19,5 +23,14 @@
   "bugs": {
     "url": "https://github.com/thuyencode/nodejs-basic-informational-site-the-odin-project/issues"
   },
-  "homepage": "https://github.com/thuyencode/nodejs-basic-informational-site-the-odin-project#readme"
+  "homepage": "https://github.com/thuyencode/nodejs-basic-informational-site-the-odin-project#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.8.0",
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "^22.0.0",
+    "eslint": "^8.57.0",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^7.17.0"
+  }
 }
