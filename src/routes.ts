@@ -2,26 +2,35 @@ import { HttpMethod, HttpStatus } from 'http-status-ts'
 import path from 'path'
 import { CURRENT_DIR } from './constants.js'
 
+function getPublicFilePath(filename: string) {
+  return path.join(path.dirname(CURRENT_DIR), 'public', filename)
+}
+
 const defaultConfig = {
   method: HttpMethod.GET,
   statusCode: HttpStatus.OK,
   contentType: { 'Content-Type': 'text/html; charset=utf-8' },
-  filePath: path.join(path.dirname(CURRENT_DIR), 'public', 'index.html')
+  filePath: getPublicFilePath('index.html')
 }
 
 export const routes = {
   '/': defaultConfig,
   '/about': {
     ...defaultConfig,
-    filePath: path.join(CURRENT_DIR, 'public', 'about.html')
+    filePath: getPublicFilePath('about.html')
   },
   '/contact-me': {
     ...defaultConfig,
-    filePath: path.join(CURRENT_DIR, 'public', 'contact-me.html')
+    filePath: getPublicFilePath('contact-me.html')
   },
   '/404': {
     ...defaultConfig,
-    filePath: path.join(CURRENT_DIR, 'public', '404.html')
+    filePath: getPublicFilePath('404.html')
+  },
+  '/styles.css': {
+    ...defaultConfig,
+    contentType: { 'Content-Type': 'text/css; charset=utf-8' },
+    filePath: getPublicFilePath('styles.css')
   }
 } as const
 
