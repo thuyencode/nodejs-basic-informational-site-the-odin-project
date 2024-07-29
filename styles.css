@@ -1,0 +1,27 @@
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main {
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+iconify-icon {
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+.iconify-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: start;
+  gap: 0.2rem;
+  flex-wrap: wrap;
+}
