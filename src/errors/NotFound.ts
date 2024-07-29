@@ -2,7 +2,7 @@ import { HttpStatus, httpStatusTextByCode } from 'http-status-ts'
 import HttpError from './HttpError.js'
 
 /**
- * Method not allow error
+ * Not Found error
  *
  * @class NotFound
  * @typedef {NotFound}
