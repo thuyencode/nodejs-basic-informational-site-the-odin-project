@@ -1,11 +1,10 @@
-import { HTTPMethod } from 'http-method-enum'
-import HTTP_STATUS_CODES from 'http-status-enum'
+import { HttpMethod, HttpStatus } from 'http-status-ts'
 import path from 'path'
 import { CURRENT_DIR } from './constants.js'
 
 const defaultConfig = {
-  method: HTTPMethod.GET,
-  statusCode: HTTP_STATUS_CODES.default.OK,
+  method: HttpMethod.GET,
+  statusCode: HttpStatus.OK,
   contentType: { 'Content-Type': 'text/html; charset=utf-8' },
   filePath: path.join(path.dirname(CURRENT_DIR), 'public', 'index.html')
 }
