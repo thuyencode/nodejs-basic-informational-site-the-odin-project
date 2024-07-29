@@ -1,7 +1,13 @@
 import { existsSync } from 'fs'
 import fs from 'fs/promises'
 import http, { IncomingMessage, ServerResponse } from 'http'
-import { HttpError, InternalServerError, NotFound } from './errors/index.js'
+import { HttpMethod } from 'http-status-ts'
+import {
+  HttpError,
+  InternalServerError,
+  MethodNotAllowed,
+  NotFound
+} from './errors/index.js'
 import { getPath } from './routes.js'
 
 /**
@@ -23,6 +29,10 @@ function logger(
 const server = http.createServer((req, res) => {
   logger(req, res, async () => {
     try {
+      if (req.method !== HttpMethod.GET) {
+        throw new MethodNotAllowed()
+      }
+
       const route = getPath(req.url as string)
 
       if (route === undefined) {
