@@ -7,7 +7,7 @@
   "scripts": {
     "build": "esbuild src/index.ts --bundle --minify --platform=node --outfile=dist/index.js --format=esm",
     "dev": "tsx watch --env-file=.env.development.local src/index.ts",
-    "start": "node --env-file=.env.production dist/index.js",
+    "start": "node --watch --env-file=.env.production dist/index.js",
     "gh-pages": "gh-pages --dist 'public' --branch 'gh-pages'",
     "lint": "tsc ; eslint ./src"
   },
