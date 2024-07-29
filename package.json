@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-basic-informational-site-the-odin-project",
+  "version": "1.0.0",
+  "description": "Project: Basic Informational Site - The Odin Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thuyencode/nodejs-basic-informational-site-the-odin-project.git"
+  },
+  "keywords": [
+    "nodejs",
+    "theodinproject"
+  ],
+  "author": "Thuyen Code",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thuyencode/nodejs-basic-informational-site-the-odin-project/issues"
+  },
+  "homepage": "https://github.com/thuyencode/nodejs-basic-informational-site-the-odin-project#readme"
+}
